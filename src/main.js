@@ -53,7 +53,7 @@ const initGSAPAnimations = () => {
 // 3. INTERAZIONI FISICHE (CURSORE E MAGNETE)
 // ==========================================
 const initInteractions = () => {
-  if (window.innerWidth <= 768) return; // Disabilita animazioni complesse cursore su touch
+  if (window.innerWidth <= 768) return;
 
   const cursor = document.querySelector('.custom-cursor');
   document.addEventListener('mousemove', (e) => {

@@ -1,4 +1,4 @@
-/* --- RESET E VARIABILI --- */
+/* --- RESET E VARIABILI (Tema Chiaro Forzato) --- */
 :root {
   --bg-color: #f8f9fa;
   --text-main: #0a0a0a;
@@ -84,7 +84,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .marquee-content .dot { font-size: 1.5rem; color: var(--text-muted); }
 @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-/* --- REVIEWS E ALTRO --- */
+/* --- REVIEWS E DETTAGLI --- */
 .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
 .review-card { padding-left: 1.5rem; border-left: 2px solid var(--text-main); opacity: 0; transform: translateY(30px); }
 .stars { font-size: 1.25rem; color: var(--text-main); margin-bottom: 1.5rem; letter-spacing: 2px; }
@@ -101,9 +101,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 
 footer { text-align: center; padding: 3rem 2rem; color: var(--text-muted); font-size: 0.85rem; }
 
-/* ==========================================
-   OTTIMIZZAZIONI MOBILE ESTREME
-========================================== */
+/* --- SUPREME MOBILE OPTIMIZATIONS --- */
 a, button, .card, .magnetic-btn {
   -webkit-tap-highlight-color: transparent;
 }
@@ -128,23 +126,4 @@ a, button, .card, .magnetic-btn {
   .nav-links a { font-size: 0.95rem; }
   .marquee-content span { font-size: 1.8rem; }
 }
-
-/* ==========================================
-   DARK MODE AUTOMATICA (NATIVA)
-========================================== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #0a0a0a;
-    --text-main: #f8f9fa;
-    --text-muted: #888888;
-    --card-bg: rgba(20, 20, 20, 0.85);
-  }
-
-  body { background-image: radial-gradient(#222222 1px, transparent 1px); }
-  
-  .card, .card-image-wrapper { border-color: rgba(255, 255, 255, 0.05); }
-  .tag { background: #1a1a1a; border-color: #333333; }
-  .badge-new { color: #000; background: #fff; }
-  .year { border-color: #333; }
-  .card-image-wrapper { background: #111; }
-}
+/* IL BLOCCO @media (prefers-color-scheme: dark) È STATO COMPLETAMENTE RIMOSSO */
