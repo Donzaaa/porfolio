@@ -27,26 +27,22 @@ gsap.ticker.lagSmoothing(0, 0);
 // 2. GSAP - ANIMAZIONI DI ENTRATA
 // ==========================================
 const initGSAPAnimations = () => {
-  // Intro Testo Hero
   const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
   heroTl.to(".hero-subtitle", { y: 0, opacity: 1, duration: 1, delay: 0.2 })
         .to(".line-inner", { y: "0%", duration: 1.2, stagger: 0.15 }, "-=0.8")
         .to(".hero-desc", { y: 0, opacity: 1, duration: 1 }, "-=0.8")
         .to(".btn", { y: 0, opacity: 1, duration: 1 }, "-=0.8");
 
-  // Ingresso Cards
   gsap.to(".gsap-card", {
     scrollTrigger: { trigger: "#apps", start: "top 75%" },
     y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out"
   });
 
-  // Ingresso Recensioni
   gsap.to(".gsap-review", {
     scrollTrigger: { trigger: "#reviews", start: "top 80%" },
     y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power2.out"
   });
 
-  // Ingresso Chi Sono
   gsap.to(".gsap-fade p", {
     scrollTrigger: { trigger: "#about", start: "top 80%" },
     y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out"
@@ -57,9 +53,8 @@ const initGSAPAnimations = () => {
 // 3. INTERAZIONI FISICHE (CURSORE E MAGNETE)
 // ==========================================
 const initInteractions = () => {
-  if (window.innerWidth <= 768) return;
+  if (window.innerWidth <= 768) return; // Disabilita animazioni complesse cursore su touch
 
-  // Cursore Custom
   const cursor = document.querySelector('.custom-cursor');
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = `${e.clientX}px`;
@@ -71,7 +66,6 @@ const initInteractions = () => {
     el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
   });
 
-  // Bottone Magnetico
   const wrapper = document.querySelector('.magnetic-wrapper');
   const btn = document.querySelector('.magnetic-btn');
   if (wrapper && btn) {
