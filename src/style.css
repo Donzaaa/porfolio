@@ -1,17 +1,28 @@
-/* --- RESET E VARIABILI (Tema Chiaro Forzato) --- */
+/* --- RESET E VARIABILI --- */
 :root {
   --bg-color: #f8f9fa;
   --text-main: #0a0a0a;
   --text-muted: #666666;
-  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: #ffffff;
 }
 
-html { cursor: none; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* FIX DEFINITIVO PER LA BARRA BIANCA SU MOBILE E LO SCROLL ORIZZONTALE */
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-main); 
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6; 
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  cursor: none;
+}
+
 body {
-  background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif;
-  line-height: 1.6; overflow-x: hidden;
   background-image: radial-gradient(var(--text-muted) 1px, transparent 1px); 
   background-size: 24px 24px;
 }
@@ -25,22 +36,48 @@ body {
 }
 .custom-cursor.hovering { width: 60px; height: 60px; background-color: white; }
 
-header { padding: 2rem 5%; display: flex; justify-content: space-between; align-items: center; }
+/* --- HEADER & NAV (Effetto Vetro Elegante - Sticky) --- */
+header {
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(248, 249, 250, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
 .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; letter-spacing: -1px; }
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; position: relative; }
 .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--text-main); transition: width 0.3s ease; }
 .nav-links a:hover::after { width: 100%; }
 
-.section-container { padding: 8rem 5%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+/* --- STRUTTURA GENERALE --- */
+.section-container { padding: 6rem 5% 8rem 5%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 
 .line { overflow: hidden; display: block; }
 .line-inner { display: block; transform: translateY(110%); }
 
-#hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; padding: 0 5%; max-width: 1200px; margin: 0 auto; }
+/* --- CONTENITORE SOLIDO PER IL TESTO --- */
+.content-box {
+  background-color: #ffffff;
+  padding: 3.5rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+#hero { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 0 5%; max-width: 1200px; margin: 0 auto; }
+#hero .content-box { max-width: 850px; } 
+
 .hero-subtitle { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; transform: translateY(20px); opacity: 0; }
-#hero h1 { font-size: clamp(4rem, 8vw, 7rem); line-height: 1.1; letter-spacing: -3px; margin-bottom: 2rem; }
+#hero h1 { font-size: clamp(3rem, 7vw, 6rem); line-height: 1.1; letter-spacing: -3px; margin-bottom: 2rem; }
 
 .text-gradient { background: linear-gradient(90deg, var(--text-main), var(--text-muted), var(--text-main)); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shine 5s linear infinite; }
 @keyframes shine { to { background-position: 200% center; } }
@@ -53,7 +90,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .section-header h2 { font-size: 2.5rem; letter-spacing: -1px; margin-bottom: 3rem; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
 
-.card { background: var(--card-bg); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.04); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.05); transition: box-shadow 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(40px); display: flex; flex-direction: column; }
+.card { background: var(--card-bg); border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); transition: box-shadow 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(40px); display: flex; flex-direction: column; }
 .card:hover { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12); transform: translateY(-5px); }
 
 .card-image-wrapper { width: 100%; height: 280px; background: #e0e0e0; overflow: hidden; border-bottom: 1px solid rgba(0,0,0,0.05); }
@@ -86,7 +123,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 
 /* --- REVIEWS E DETTAGLI --- */
 .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-.review-card { padding-left: 1.5rem; border-left: 2px solid var(--text-main); opacity: 0; transform: translateY(30px); }
+.review-card { padding: 2.5rem; border-left: 4px solid var(--text-main); opacity: 0; transform: translateY(30px); }
 .stars { font-size: 1.25rem; color: var(--text-main); margin-bottom: 1.5rem; letter-spacing: 2px; }
 .review-card p { font-size: 1.2rem; color: var(--text-main); line-height: 1.6; margin-bottom: 1.5rem; font-weight: 500; }
 .author { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
@@ -97,7 +134,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 #contact { text-align: center; padding: 10rem 5%; }
 #contact h2 { color: var(--text-muted); font-size: 1.25rem; font-weight: 500; margin-bottom: 1rem; }
 .magnetic-wrapper { display: inline-block; padding: 2rem; }
-.huge-link { font-size: clamp(3rem, 6vw, 5rem); font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-main); text-decoration: none; letter-spacing: -2px; display: inline-block; transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.huge-link { font-size: clamp(2.5rem, 5vw, 4rem); font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-main); text-decoration: none; letter-spacing: -2px; display: inline-block; transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 footer { text-align: center; padding: 3rem 2rem; color: var(--text-muted); font-size: 0.85rem; }
 
@@ -113,7 +150,7 @@ a, button, .card, .magnetic-btn {
   header {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 2rem 5%;
+    padding: 1.5rem 5%;
   }
   
   .nav-links {
@@ -125,5 +162,6 @@ a, button, .card, .magnetic-btn {
   
   .nav-links a { font-size: 0.95rem; }
   .marquee-content span { font-size: 1.8rem; }
+  
+  .content-box { padding: 2rem; }
 }
-/* IL BLOCCO @media (prefers-color-scheme: dark) È STATO COMPLETAMENTE RIMOSSO */

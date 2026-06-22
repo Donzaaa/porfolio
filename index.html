@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>donza.dev | Portfolio</title>
+    <link rel="icon" type="image/png" href="/favicon-portfolio.png">
     <meta name="theme-color" content="#f8f9fa">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
@@ -26,13 +27,15 @@
 
     <main>
       <section id="hero">
-        <p class="hero-subtitle">Mobile Developer / Vibecoder</p>
-        <h1 class="hero-title">
-          <span class="line"><span class="line-inner">Code as</span></span><br>
-          <span class="line"><span class="line-inner text-gradient">design.</span></span>
-        </h1>
-        <p class="hero-desc">Sviluppo applicazioni native e cross-platform con un'ossessione per i dettagli invisibili. Meno rumore, più performance.</p>
-        <a href="#apps" class="btn">Esplora le App &darr;</a>
+        <div class="content-box">
+          <p class="hero-subtitle">Mobile Developer / Vibecoder</p>
+          <h1 class="hero-title">
+            <span class="line"><span class="line-inner">Code as</span></span><br>
+            <span class="line"><span class="line-inner text-gradient">design.</span></span>
+          </h1>
+          <p class="hero-desc">Sviluppo applicazioni native e cross-platform con un'ossessione per i dettagli invisibili. Meno rumore, più performance.</p>
+          <a href="#apps" class="btn">Esplora le App &darr;</a>
+        </div>
       </section>
 
       <section id="apps" class="section-container">
@@ -61,6 +64,7 @@
               <a href="https://play.google.com/store/apps/details?id=com.aureo.app&pcampaignid=web_share" target="_blank" class="play-store-btn">Scarica da Google Play &nearr;</a>
             </div>
           </div>
+
           <div class="card gsap-card">
             <div class="card-image-wrapper">
               <img src="/lupus.png" alt="Lupus App" class="card-image" loading="lazy">
@@ -96,9 +100,6 @@
               <span class="coming-soon-btn">Prossimamente</span>
             </div>
           </div>
-
-          
-
         </div>
       </section>
 
@@ -130,17 +131,17 @@
           <h2>Dicono delle mie App</h2>
         </div>
         <div class="reviews-grid">
-          <div class="review-card gsap-review">
+          <div class="review-card content-box gsap-review">
             <div class="stars">★★★★★</div>
             <p>"Interfaccia pulitissima e zero lag. Ottimo lavoro."</p>
             <span class="author">&mdash; Utente (Lupus)</span>
           </div>
-          <div class="review-card gsap-review">
+          <div class="review-card content-box gsap-review">
             <div class="stars">★★★★★</div>
             <p>"La mia app principale. Animazioni fluidissime."</p>
             <span class="author">&mdash; Utente (Gritmo)</span>
           </div>
-          <div class="review-card gsap-review">
+          <div class="review-card content-box gsap-review">
             <div class="stars">★★★★★</div>
             <p>"Sviluppatore super reattivo. Bug risolto in 24h."</p>
             <span class="author">&mdash; Utente Play Store</span>
@@ -153,17 +154,19 @@
           <h2>Chi sono</h2>
         </div>
         <div class="about-grid">
-          <div class="about-text gsap-fade">
+          <div class="about-text content-box gsap-fade">
             <p>Ho 20 anni e credo che il software debba essere invisibile. L'utente non deve notare la tecnologia, ma solo quanto sia facile raggiungere il suo obiettivo.</p>
-            <p>Curo ogni application dal wireframe iniziale fino al deploy finale sul Google Play Store, garantendo animazioni fluide e stabili e architetture di codice scalabili.</p>
+            <p>Curo ogni applicazione dal wireframe iniziale fino al deploy finale sul Google Play Store, garantendo animazioni fluide e stabili e architetture di codice scalabili.</p>
           </div>
         </div>
       </section>
 
       <section id="contact" class="section-container">
-        <h2>Pronto per la prossima build?</h2>
-        <div class="magnetic-wrapper">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andreaferretti06@gmail.com" target="_blank" class="huge-link magnetic-btn">Parliamone &nearr;</a>
+        <div class="content-box" style="margin: 0 auto; text-align: center; max-width: 800px;">
+          <h2>Pronto per la prossima build?</h2>
+          <div class="magnetic-wrapper">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andreaferretti06@gmail.com" target="_blank" class="huge-link magnetic-btn">Parliamone &nearr;</a>
+          </div>
         </div>
       </section>
     </main>
