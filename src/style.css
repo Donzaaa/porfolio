@@ -61,14 +61,9 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .card-image-wrapper { width: 100%; height: 280px; background: #e0e0e0; overflow: hidden; border-bottom: 1px solid rgba(0,0,0,0.05); }
 .card-image { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* --- REGOLA SPECIFICA PER PALE --- */
-.card-pale-specific .card-image-wrapper {
-  background-color: #000000; /* Sfondo nero al contenitore */
-}
-
-.card-pale-specific .card-image {
-  opacity: 0.9; /* Opzionale: rende l'icona leggermente meno "sparante" sul nero */
-}
+/* REGOLA SPECIFICA PER PALE/GRITMO */
+.card-pale-specific .card-image-wrapper { background-color: #000000; }
+.card-pale-specific .card-image { opacity: 0.9; }
 
 .card-content { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
 .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
@@ -77,8 +72,36 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .card p { color: var(--text-muted); margin-bottom: 1.5rem; flex-grow: 1; }
 .tech-stack { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
 .tag { background: #eeeeee; color: var(--text-main); font-size: 0.8rem; font-weight: 500; padding: 0.4rem 0.8rem; border-radius: 6px; }
+
 .play-store-btn { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.95rem; padding-bottom: 0.3rem; border-bottom: 1px solid #ccc; display: inline-block; width: fit-content; transition: color 0.3s, border-color 0.3s; }
 .play-store-btn:hover { color: var(--text-muted); border-color: var(--text-main); }
+
+/* AGGIUNTE: Badge Novità e Pulsante Disabilitato */
+.badge-new {
+  background-color: var(--text-main);
+  color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.coming-soon-btn {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px dashed var(--text-muted); /* Linea tratteggiata */
+  display: inline-block;
+  width: fit-content;
+  cursor: not-allowed;
+  user-select: none;
+}
 
 /* --- MARQUEE INFINITO --- */
 .marquee-section { padding: 4rem 0; background: var(--text-main); color: var(--bg-color); overflow: hidden; transform: rotate(-1deg); margin: 6rem 0; width: 105vw; margin-left: -2.5vw; }
