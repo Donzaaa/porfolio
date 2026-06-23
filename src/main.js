@@ -82,9 +82,45 @@ const initInteractions = () => {
 };
 
 // ==========================================
+// 4. INTERNATIONALIZATION (I18N)
+// ==========================================
+const initI18n = () => {
+  const langToggle = document.getElementById('lang-toggle');
+  if (!langToggle) return;
+
+  // Recupera la preferenza salvata, altrimenti forza l'inglese di default
+  let currentLang = localStorage.getItem('donza_lang') || 'en';
+  
+  const updateLanguage = (lang) => {
+    document.documentElement.lang = lang; // Cambia il tag html lang
+    
+    // Trova tutti gli elementi con la classe .i18n
+    const elements = document.querySelectorAll('.i18n');
+    elements.forEach(el => {
+      // Inserisce il testo dell'attributo corrispondente (data-en o data-it)
+      el.innerHTML = el.getAttribute(`data-${lang}`);
+    });
+    
+    // Il bottone mostra la lingua in cui *puoi* passare (es. se sei in EN, il bottone mostra "IT")
+    langToggle.textContent = lang === 'en' ? 'IT' : 'EN';
+  };
+
+  // Esegui subito l'aggiornamento all'avvio
+  updateLanguage(currentLang);
+
+  // Al click, cambia lingua e salvala in memoria
+  langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'it' : 'en';
+    localStorage.setItem('donza_lang', currentLang);
+    updateLanguage(currentLang);
+  });
+};
+
+// ==========================================
 // SETUP COMPLETO ALL'AVVIO
 // ==========================================
 window.addEventListener('DOMContentLoaded', () => {
   initInteractions();
+  initI18n(); // <-- Avvia il sistema multilingua
   setTimeout(initGSAPAnimations, 100);
 });

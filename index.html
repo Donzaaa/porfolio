@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,10 +17,12 @@
       <nav>
         <div class="logo">donza</div>
         <ul class="nav-links">
-          <li><a href="#apps">Lavori</a></li>
-          <li><a href="#reviews">Recensioni</a></li>
-          <li><a href="#about">Chi sono</a></li>
-          <li><a href="#contact">Contatti</a></li>
+          <li><a href="#apps" class="i18n" data-en="Works" data-it="Lavori">Works</a></li>
+          <li><a href="#reviews" class="i18n" data-en="Reviews" data-it="Recensioni">Reviews</a></li>
+          <li><a href="#about" class="i18n" data-en="About" data-it="Chi sono">About</a></li>
+          <li><a href="#contact" class="i18n" data-en="Contact" data-it="Contatti">Contact</a></li>
+          <!-- Tasto per il cambio lingua -->
+          <li><button id="lang-toggle" class="lang-btn">IT</button></li>
         </ul>
       </nav>
     </header>
@@ -33,17 +35,18 @@
             <span class="line"><span class="line-inner">Code as</span></span><br>
             <span class="line"><span class="line-inner text-gradient">design.</span></span>
           </h1>
-          <p class="hero-desc">Sviluppo applicazioni native e cross-platform con un'ossessione per i dettagli invisibili. Meno rumore, più performance.</p>
-          <a href="#apps" class="btn">Esplora le App &darr;</a>
+          <p class="hero-desc i18n" data-en="Developing native and cross-platform applications with an obsession for invisible details. Less noise, more performance." data-it="Sviluppo applicazioni native e cross-platform con un'ossessione per i dettagli invisibili. Meno rumore, più performance.">Developing native and cross-platform applications with an obsession for invisible details. Less noise, more performance.</p>
+          <a href="#apps" class="btn i18n" data-en="Explore Apps &darr;" data-it="Esplora le App &darr;">Explore Apps &darr;</a>
         </div>
       </section>
 
       <section id="apps" class="section-container">
         <div class="section-header">
-          <h2>Le mie Applicazioni</h2>
+          <h2><span class="i18n" data-en="My Applications" data-it="Le mie Applicazioni">My Applications</span></h2>
         </div>
         
         <div class="grid">
+          
           <div class="card gsap-card">
             <div class="card-image-wrapper">
               <img src="/icon.png" alt="Aureo App" class="card-image" loading="lazy">
@@ -52,16 +55,16 @@
               <div class="card-top">
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
                   <h3>Aureo</h3>
-                  <span class="badge-new">&check; Novità</span>
+                  <span class="badge-new i18n" data-en="&check; New" data-it="&check; Novità">&check; New</span>
                 </div>
                 <span class="year">2026</span>
               </div>
-              <p>Design estremamente minimale, codice ultra-ottimizzato e gestione avanzata dello stato locale.</p>
+              <p class="i18n" data-en="Extremely minimal design, ultra-optimized code, and advanced local state management." data-it="Design estremamente minimale, codice ultra-ottimizzato e gestione avanzata dello stato locale.">Extremely minimal design, ultra-optimized code, and advanced local state management.</p>
               <div class="tech-stack">
                 <span class="tag">Kotlin</span>
                 <span class="tag">Android</span>
               </div>
-              <a href="https://play.google.com/store/apps/details?id=com.aureo.app&pcampaignid=web_share" target="_blank" class="play-store-btn">Scarica da Google Play &nearr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.aureo.app&pcampaignid=web_share" target="_blank" class="play-store-btn i18n" data-en="Download on Google Play &nearr;" data-it="Scarica da Google Play &nearr;">Download on Google Play &nearr;</a>
             </div>
           </div>
 
@@ -74,12 +77,15 @@
                 <h3>Lupus</h3>
                 <span class="year">2026</span>
               </div>
-              <p>Interfaccia pulitissima e zero lag. Fa esattamente quello che promette senza pubblicità invasive.</p>
+              <p class="i18n" data-en="Extremely clean interface and zero lag. It does exactly what it promises without invasive ads." data-it="Interfaccia pulitissima e zero lag. Fa esattamente quello che promette senza pubblicità invasive.">Extremely clean interface and zero lag. It does exactly what it promises without invasive ads.</p>
               <div class="tech-stack">
                 <span class="tag">React Native</span>
                 <span class="tag">Firebase</span>
               </div>
-              <span class="coming-soon-btn">Prossimamente</span>
+              <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
+                <a href="https://groups.google.com/g/donza-test" target="_blank" class="play-store-btn i18n" data-en="1. Join Tester Group &nearr;" data-it="1. Unisciti al Gruppo Tester &nearr;">1. Join Tester Group &nearr;</a>
+                <a href="https://play.google.com/store/apps/details?id=com.donza.lupus" target="_blank" class="play-store-btn i18n" data-en="2. Download Beta &nearr;" data-it="2. Scarica la Beta &nearr;">2. Download Beta &nearr;</a>
+              </div>
             </div>
           </div>
 
@@ -92,19 +98,45 @@
                 <h3>Gritmo</h3>
                 <span class="year">2026</span>
               </div>
-              <p>Sfide tecniche superate e architettura scelta per renderla fluida come il burro a 60fps.</p>
+              <p class="i18n" data-en="Technical challenges overcome and architecture chosen to make it buttery smooth at 60fps." data-it="Sfide tecniche superate e architettura scelta per renderla fluida come il burro a 60fps.">Technical challenges overcome and architecture chosen to make it buttery smooth at 60fps.</p>
               <div class="tech-stack">
                 <span class="tag">Flutter</span>
                 <span class="tag">Supabase</span>
               </div>
-              <span class="coming-soon-btn">Prossimamente</span>
+              <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
+                <a href="https://groups.google.com/g/donza-test" target="_blank" class="play-store-btn i18n" data-en="1. Join Tester Group &nearr;" data-it="1. Unisciti al Gruppo Tester &nearr;">1. Join Tester Group &nearr;</a>
+                <a href="https://play.google.com/store/apps/details?id=com.donza.gritmo" target="_blank" class="play-store-btn i18n" data-en="2. Download Beta &nearr;" data-it="2. Scarica la Beta &nearr;">2. Download Beta &nearr;</a>
+              </div>
             </div>
           </div>
+
+          <div class="card gsap-card">
+            <div class="card-image-wrapper">
+              <img src="/flexed_icon.png" alt="Flexed App" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-top">
+                <h3>Flexed</h3>
+                <span class="year">2026</span>
+              </div>
+              <p class="i18n" data-en="Climb the leaderboards and get visibility for your socials." data-it="Scala le classifiche e ottieni visibilità per i tuoi social.">Climb the leaderboards and get visibility for your socials.</p>
+              <div class="tech-stack">
+                <span class="tag">Swift</span>
+                <span class="tag">iOS</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
+                <a href="https://groups.google.com/g/donza-test" target="_blank" class="play-store-btn i18n" data-en="1. Join Tester Group &nearr;" data-it="1. Unisciti al Gruppo Tester &nearr;">1. Join Tester Group &nearr;</a>
+                <a href="https://play.google.com/store/apps/details?id=com.donza.flexed" target="_blank" class="play-store-btn i18n" data-en="2. Download Beta &nearr;" data-it="2. Scarica la Beta &nearr;">2. Download Beta &nearr;</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
       <section id="tech-stack" class="marquee-section">
         <div class="marquee-container">
+          <!-- Marquee Code (rimasto invariato) -->
           <div class="marquee-content">
             <span>KOTLIN</span><span class="dot">&diams;</span>
             <span>FLUTTER</span><span class="dot">&diams;</span>
@@ -128,51 +160,51 @@
 
       <section id="reviews" class="section-container">
         <div class="section-header">
-          <h2>Dicono delle mie App</h2>
+          <h2><span class="i18n" data-en="What they say about my Apps" data-it="Dicono delle mie App">What they say about my Apps</span></h2>
         </div>
         <div class="reviews-grid">
           <div class="review-card content-box gsap-review">
             <div class="stars">★★★★★</div>
-            <p>"Interfaccia pulitissima e zero lag. Ottimo lavoro."</p>
-            <span class="author">&mdash; Utente (Lupus)</span>
+            <p class="i18n" data-en="&quot;Extremely clean interface and zero lag. Great job.&quot;" data-it="&quot;Interfaccia pulitissima e zero lag. Ottimo lavoro.&quot;">"Extremely clean interface and zero lag. Great job."</p>
+            <span class="author i18n" data-en="&mdash; User (Lupus)" data-it="&mdash; Utente (Lupus)">&mdash; User (Lupus)</span>
           </div>
           <div class="review-card content-box gsap-review">
             <div class="stars">★★★★★</div>
-            <p>"La mia app principale. Animazioni fluidissime."</p>
-            <span class="author">&mdash; Utente (Gritmo)</span>
+            <p class="i18n" data-en="&quot;My main app. Super fluid animations.&quot;" data-it="&quot;La mia app principale. Animazioni fluidissime.&quot;">"My main app. Super fluid animations."</p>
+            <span class="author i18n" data-en="&mdash; User (Gritmo)" data-it="&mdash; Utente (Gritmo)">&mdash; User (Gritmo)</span>
           </div>
           <div class="review-card content-box gsap-review">
             <div class="stars">★★★★★</div>
-            <p>"Sviluppatore super reattivo. Bug risolto in 24h."</p>
-            <span class="author">&mdash; Utente Play Store</span>
+            <p class="i18n" data-en="&quot;Super responsive developer. Bug fixed in 24h.&quot;" data-it="&quot;Sviluppatore super reattivo. Bug risolto in 24h.&quot;">"Super responsive developer. Bug fixed in 24h."</p>
+            <span class="author i18n" data-en="&mdash; Play Store User" data-it="&mdash; Utente Play Store">&mdash; Play Store User</span>
           </div>
         </div>
       </section>
 
       <section id="about" class="section-container">
         <div class="section-header">
-          <h2>Chi sono</h2>
+          <h2><span class="i18n" data-en="About me" data-it="Chi sono">About me</span></h2>
         </div>
         <div class="about-grid">
           <div class="about-text content-box gsap-fade">
-            <p>Ho 20 anni e credo che il software debba essere invisibile. L'utente non deve notare la tecnologia, ma solo quanto sia facile raggiungere il suo obiettivo.</p>
-            <p>Curo ogni applicazione dal wireframe iniziale fino al deploy finale sul Google Play Store, garantendo animazioni fluide e stabili e architetture di codice scalabili.</p>
+            <p class="i18n" data-en="I'm 20 years old and I believe software should be invisible. The user shouldn't notice the technology, but only how easy it is to achieve their goal." data-it="Ho 20 anni e credo che il software debba essere invisibile. L'utente non deve notare la tecnologia, ma solo quanto sia facile raggiungere il suo obiettivo.">I'm 20 years old and I believe software should be invisible. The user shouldn't notice the technology, but only how easy it is to achieve their goal.</p>
+            <p class="i18n" data-en="I take care of every application from the initial wireframe to the final deploy on the stores, ensuring fluid animations, stability, and scalable code architectures." data-it="Curo ogni applicazione dal wireframe iniziale fino al deploy finale sugli Store, garantendo animazioni fluide e stabili e architetture di codice scalabili.">I take care of every application from the initial wireframe to the final deploy on the stores, ensuring fluid animations, stability, and scalable code architectures.</p>
           </div>
         </div>
       </section>
 
       <section id="contact" class="section-container">
         <div class="content-box" style="margin: 0 auto; text-align: center; max-width: 800px;">
-          <h2>Pronto per la prossima build?</h2>
+          <h2 class="i18n" data-en="Ready for the next build?" data-it="Pronto per la prossima build?">Ready for the next build?</h2>
           <div class="magnetic-wrapper">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andreaferretti06@gmail.com" target="_blank" class="huge-link magnetic-btn">Parliamone &nearr;</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andreaferretti06@gmail.com" target="_blank" class="huge-link magnetic-btn i18n" data-en="Let's talk &nearr;" data-it="Parliamone &nearr;">Let's talk &nearr;</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 donza &mdash; engineered with intentions.</p>
+      <p>&copy; 2026 donza &mdash; <span class="i18n" data-en="engineered with intentions." data-it="progettato con intenzione.">engineered with intentions.</span></p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>

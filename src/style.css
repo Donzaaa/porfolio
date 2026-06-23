@@ -52,7 +52,7 @@ header {
 }
 
 .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; letter-spacing: -1px; }
-.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links { list-style: none; display: flex; gap: 2rem; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; position: relative; }
 .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--text-main); transition: width 0.3s ease; }
 .nav-links a:hover::after { width: 100%; }
@@ -111,7 +111,6 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 .play-store-btn:hover { color: var(--text-muted); border-color: var(--text-main); }
 
 .badge-new { background-color: var(--text-main); color: var(--bg-color); font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 0.2rem 0.6rem; border-radius: 100px; display: inline-flex; align-items: center; }
-.coming-soon-btn { color: var(--text-muted); font-weight: 600; font-size: 0.95rem; padding-bottom: 0.3rem; border-bottom: 1px dashed var(--text-muted); display: inline-block; width: fit-content; cursor: not-allowed; user-select: none; }
 
 /* --- MARQUEE --- */
 .marquee-section { padding: 4rem 0; background: var(--text-main); color: var(--bg-color); overflow: hidden; transform: rotate(-1deg); margin: 6rem 0; width: 105vw; margin-left: -2.5vw; }
@@ -138,8 +137,28 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
 
 footer { text-align: center; padding: 3rem 2rem; color: var(--text-muted); font-size: 0.85rem; }
 
+/* --- BOTTONE LINGUA --- */
+.lang-btn {
+  background: none;
+  border: 1px solid var(--text-main);
+  border-radius: 100px;
+  padding: 0.2rem 0.8rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.lang-btn:hover {
+  background: var(--text-main);
+  color: var(--bg-color);
+}
+
 /* --- SUPREME MOBILE OPTIMIZATIONS --- */
-a, button, .card, .magnetic-btn {
+a, button, .card, .magnetic-btn, .lang-btn {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -161,6 +180,8 @@ a, button, .card, .magnetic-btn {
   }
   
   .nav-links a { font-size: 0.95rem; }
+  .lang-btn { margin-left: 0; }
+  
   .marquee-content span { font-size: 1.8rem; }
   
   .content-box { padding: 2rem; }
