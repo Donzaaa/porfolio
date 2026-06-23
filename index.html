@@ -18,16 +18,17 @@
         <div class="logo">donza</div>
         <ul class="nav-links">
           <li><a href="#apps" class="i18n" data-en="Works" data-it="Lavori">Works</a></li>
+          <li><a href="#qa" class="i18n" data-en="QA Testing" data-it="QA Testing">QA Testing</a></li>
           <li><a href="#reviews" class="i18n" data-en="Reviews" data-it="Recensioni">Reviews</a></li>
           <li><a href="#about" class="i18n" data-en="About" data-it="Chi sono">About</a></li>
           <li><a href="#contact" class="i18n" data-en="Contact" data-it="Contatti">Contact</a></li>
-          <!-- Tasto per il cambio lingua -->
           <li><button id="lang-toggle" class="lang-btn">IT</button></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!-- Sezione Hero -->
       <section id="hero">
         <div class="content-box">
           <p class="hero-subtitle">Mobile Developer / Vibecoder</p>
@@ -40,6 +41,7 @@
         </div>
       </section>
 
+      <!-- Sezione Applicazioni -->
       <section id="apps" class="section-container">
         <div class="section-header">
           <h2><span class="i18n" data-en="My Applications" data-it="Le mie Applicazioni">My Applications</span></h2>
@@ -134,9 +136,127 @@
         </div>
       </section>
 
+      <!-- Sezione QA & Testing (Premium Bento) -->
+      <section id="qa" class="section-container">
+        <div class="section-header">
+          <h2><span class="i18n" data-en="QA & App Testing" data-it="QA & App Testing">QA & App Testing</span></h2>
+        </div>
+        
+        <!-- Headline / Gancio Principale -->
+        <div class="content-box" style="margin-bottom: 3rem;">
+          <h3 style="font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; line-height: 1.2; letter-spacing: -1px; font-family: 'Space Grotesk', sans-serif;" class="i18n" 
+              data-en="I build apps, so I know exactly how to break them." 
+              data-it="Costruisco app, quindi so esattamente come romperle.">
+            I build apps, so I know exactly how to break them.
+          </h3>
+          <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 800px;" class="i18n" 
+             data-en="Technical QA testing services for independent developers. I don't just tap randomly on the screen: I speak your language, read the logs, and find the edge-cases you didn't anticipate." 
+             data-it="Servizi di QA testing tecnico per sviluppatori indipendenti. Non mi limito a cliccare a caso sullo schermo: parlo la tua stessa lingua, leggo i log e scovo gli edge-cases che non avevi previsto.">
+            Technical QA testing services for independent developers. I don't just tap randomly on the screen: I speak your language, read the logs, and find the edge-cases you didn't anticipate.
+          </p>
+        </div>
+
+        <div class="grid" style="gap: 2rem;">
+          
+          <!-- Box 1: I Servizi -->
+          <div class="content-box gsap-card premium-bento">
+            <div class="bento-header">
+              <div class="bento-icon">🛡️</div>
+              <h4 class="i18n" data-en="Specialized Services" data-it="Servizi Specializzati">Specialized Services</h4>
+            </div>
+            
+            <div class="service-item">
+              <strong class="i18n" data-en="Exploratory & Technical QA" data-it="QA Tecnico & Esplorativo">Exploratory & Technical QA</strong>
+              <p class="i18n" data-en="Stress-testing your app's limits. I hunt down crashes, memory leaks, and UX flaws before your users do." data-it="Metto sotto stress la tua app. Scovo crash, colli di bottiglia e difetti UX prima che lo facciano i tuoi utenti.">Stress-testing your app's limits. I hunt down crashes, memory leaks, and UX flaws before your users do.</p>
+            </div>
+            
+            <div class="service-item highlight-service">
+              <div class="service-badge i18n" data-en="High Demand" data-it="Più richiesto">High Demand</div>
+              <strong class="i18n" data-en="14-Day Google Play Closed Testing" data-it="Test Chiuso 14 Giorni (Google Play)">14-Day Google Play Closed Testing</strong>
+              <p class="i18n" data-en="I help you easily bypass Google's 20-tester rule with consistent, documented daily testing." data-it="Ti aiuto a superare in sicurezza la regola dei 20 tester di Google con test giornalieri costanti e ben documentati.">I help you easily bypass Google's 20-tester rule with consistent, documented daily testing.</p>
+            </div>
+          </div>
+
+          <!-- Box 2: Stress Testing Software -->
+          <div class="content-box gsap-card premium-bento">
+            <div class="bento-header">
+              <div class="bento-icon">⚡</div>
+              <h4 class="i18n" data-en="Deep Stress Testing" data-it="Stress Test Profondo">Deep Stress Testing</h4>
+            </div>
+            <p class="bento-desc i18n" 
+               data-en="I deploy advanced software to brutally stress your app. By simulating thousands of rapid interactions, I expose hidden bottlenecks, sudden crashes, and memory leaks." 
+               data-it="Utilizzo software avanzati per stressare a fondo la tua app. Simulando migliaia di interazioni, faccio emergere colli di bottiglia nascosti, crash improvvisi e memory leak.">
+              I deploy advanced software to brutally stress your app. By simulating thousands of rapid interactions, I expose hidden bottlenecks, sudden crashes, and memory leaks.
+            </p>
+            
+            <div class="device-grid"> <!-- Manteniamo questa classe per riutilizzare lo stile CSS -->
+              <div class="device-tag">
+                <span class="device-status" style="background-color: #ef4444; box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);"></span>
+                <span class="i18n" data-en="Automated Monkey Testing" data-it="Monkey Testing Automatizzato">Automated Monkey Testing</span>
+              </div>
+              <div class="device-tag">
+                <span class="device-status" style="background-color: #eab308; box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);"></span>
+                <span class="i18n" data-en="Memory Leak Detection" data-it="Rilevamento Memory Leak">Memory Leak Detection</span>
+              </div>
+              <div class="device-tag">
+                <span class="device-status" style="background-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);"></span>
+                <span class="i18n" data-en="Performance Bottlenecks" data-it="Analisi Colli di Bottiglia">Performance Bottlenecks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 3: Come Lavoro / Report -->
+          <div class="content-box gsap-card premium-bento">
+            <div class="bento-header">
+              <div class="bento-icon">📑</div>
+              <h4 class="i18n" data-en="Developer-Ready Reports" data-it="Report per Sviluppatori">Developer-Ready Reports</h4>
+            </div>
+            <p class="bento-desc i18n" data-en="No more 'it doesn't work' vague emails. My bug reports are engineered for developers to fix issues in minutes, not hours." data-it="Basta email vaghe del tipo 'non funziona'. I miei bug report sono strutturati in modo chirurgico per farti risolvere i problemi in minuti, non ore.">No more 'it doesn't work' vague emails. My bug reports are engineered for developers to fix issues in minutes, not hours.</p>
+            
+            <ul class="report-checklist">
+              <li>
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong class="i18n" data-en="Precise 'Steps to Reproduce'" data-it="'Steps to Reproduce' Precisi">Precise 'Steps to Reproduce'</strong>
+                </div>
+              </li>
+              <li>
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong class="i18n" data-en="Device State, OS & Logcat" data-it="Stato Dispositivo, OS & Logcat">Device State, OS & Logcat</strong>
+                </div>
+              </li>
+              <li>
+                <div class="check-icon">✓</div>
+                <div>
+                  <strong class="i18n" data-en="Screen Recordings & Screenshots" data-it="Registrazioni Schermo & Screenshot">Screen Recordings & Screenshots</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- CTA Premium dedicata al QA (Sfondo Scuro & Link Aggiornati) -->
+        <div class="qa-cta-box content-box gsap-card">
+          <div class="qa-cta-content">
+            <h4 class="i18n" data-en="Ready to bulletproof your app?" data-it="Pronto a blindare la tua app?">Ready to bulletproof your app?</h4>
+            <p class="i18n" 
+               data-en="Stop losing users due to bugs you didn't catch. Let's discuss your custom testing needs and get your app launch-ready." 
+               data-it="Smetti di perdere utenti per bug che ti sono sfuggiti. Discutiamo delle tue necessità di testing e prepariamo la tua app per un lancio perfetto.">
+              Stop losing users due to bugs you didn't catch. Let's discuss your custom testing needs and get your app launch-ready.
+            </p>
+          </div>
+          <div class="qa-cta-actions">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=andreaferretti06@gmail.com&su=Richiesta%20preventivo%20QA%20Testing" target="_blank" class="btn qa-btn i18n" data-en="Request a Quote &nearr;" data-it="Richiedi Preventivo &nearr;">Request a Quote &nearr;</a>
+            <a href="https://t.me/donzaa" target="_blank" class="play-store-btn qa-alt-btn i18n" data-en="Message me on Telegram" data-it="Scrivimi su Telegram">Message me on Telegram</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee Infinito -->
       <section id="tech-stack" class="marquee-section">
         <div class="marquee-container">
-          <!-- Marquee Code (rimasto invariato) -->
           <div class="marquee-content">
             <span>KOTLIN</span><span class="dot">&diams;</span>
             <span>FLUTTER</span><span class="dot">&diams;</span>
@@ -158,6 +278,7 @@
         </div>
       </section>
 
+      <!-- Recensioni -->
       <section id="reviews" class="section-container">
         <div class="section-header">
           <h2><span class="i18n" data-en="What they say about my Apps" data-it="Dicono delle mie App">What they say about my Apps</span></h2>
@@ -181,6 +302,7 @@
         </div>
       </section>
 
+      <!-- Chi Sono -->
       <section id="about" class="section-container">
         <div class="section-header">
           <h2><span class="i18n" data-en="About me" data-it="Chi sono">About me</span></h2>
@@ -193,6 +315,7 @@
         </div>
       </section>
 
+      <!-- Contatti -->
       <section id="contact" class="section-container">
         <div class="content-box" style="margin: 0 auto; text-align: center; max-width: 800px;">
           <h2 class="i18n" data-en="Ready for the next build?" data-it="Pronto per la prossima build?">Ready for the next build?</h2>
